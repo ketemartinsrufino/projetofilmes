@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0;width:device-width">
+<meta name="google-site-verification" content="IErLu-zxVGmfQvPOL70gcZibU7w7g83emRIsfRVzPLo" />
+
+<title>CEJS 2018</title>
+
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+
+</head>
+<body id="contentBody">
+    <div id="menu">
+        <ul>
+            <li><a href="#inscricoes" title="Inscrições">Inscrições</a></li>
+            <li><a href="#callforpapers" title="Call for Papers">Lightning Talks</a></li>
+            <li><a href="#location" title="Local">Local</a></li>
+            <li><a href="#sponsors" title="Patrocinadores">Patrocinadores</a></li>
+            <li><a href="http://www.cejs.com.br/2017" title="2017">2017</a></li>
+        </ul>
+    </div>
+
+
+    <div id="front">
+        <img src="images/logo-yellow-small.png" class="logo" />
+        <h1>CEJS <!--year--></h1>
+        <h2><!--date--> / <!--city--></h2>
+        <br/><br/><br/><br/><br/>
+    </div>
+
+    <a name="inscricoes"></a>
+    <div class="section inscricoes">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="MMHN8AZBCX5ZA">
+            <input type="submit"  className="paypal btn" border="0" name="submit" alt="PayPal - A maneira fácil e segura de enviar pagamentos online!" value="Comprar Agora">
+            <img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
+        </form>
+    </div>
+
+    <a name="callforpapers"></a>
+        <div class="section callforpapers">
+            <h1>Lightning Talks</h1>
+            <table class="schedule-grid" id="agenda-lt">
+                <tr>
+                    <td class="schedule-hour">08:30</td>
+                    <td><h2> Credenciamento </h2></td>
+                </tr>
+                <tr>
+                    <td class="schedule-hour">09:00</td>
+                    <td><h2> Apresentação do evento </h2></td>
+                </tr>
+                <tr>
+                    <td class="schedule-hour">09:10</td>
+                    <td>
+                        <h2>React Router + GraphQL</h2>
+                        <h3><a href="https://twitter.com/adalto_junior">Adalto Ferreira Evangelista Junior</a></h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="schedule-hour">09:30</td>
+                    <td>
+                        <h2>React Server Side Rendering.</h2>
+                        <h3><a href="https://twitter.com/cjpatoilo">Carlos Patoilo</a></h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="schedule-hour">09:50</td>
+                    <td>
+                        <h2>Transformação Digital, Cultura e Soluções com Stack JS</h2>
+                        <h3><a href="https://twitter.com/@alane.io">Alane Pontes</a>/<a href="https://twitter.com/KewersonHugo">Kewerson Hugo</a></h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="schedule-hour">10:10</td>
+                    <td>
+                        <h2>(Try to) Avoid React Native development being a nightmare</h2>
+                        <h3><a href="https://twitter.com/franzejr">Franzé Jr.</a></h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="schedule-hour">10:30</td>
+                    <td><h2>Coffee Break/Network</h2></td>
+                </tr>
+                <tr>
+                    <td class="schedule-hour">11:00</td>
+                    <td><h2>Apresentação dos Patrocinadores</h2></td>
+                </tr>
+                <tr>
+                    <td class="schedule-hour">11:05</td>
+                    <td>
+                        <h2>Blockchain + Vue.js: Uma combinação poderosa na criação de smart-contracts</h2>
+                        <h3><a href="https://twitter.com/Ziggoto">Fábio Theophilo</a></h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="schedule-hour">11:25</td>
+                    <td>
+                        <h2>React + Statecharts - Repensando seu frontend</h2>
+                        <h3><a href="https://twitter.com/filipem_th">Filipe Monteiro</a></h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="schedule-hour">11:45</td>
+                    <td>
+                        <h2>Mantendo a estabilidade de seu Frontend com pipeline de CI/CD</h2>
+                        <h3><a href="https://twitter.com/yuriadams">Yuri Adams</a></h3>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    <a name="location"></a>
+    <div class="section location">
+        <h1>Local</h1>
+        <p><b><!--local--></b><br/><!--address--></p>
+        <div id="map"></div>
+        <p><!--local_description--></p>
+    </div>
+
+    <a name="sponsors"></a>
+    <div class="section sponsors">
+        <h1>Sponsors</h1>
+        <div class="container">
+            <h3>Gold</h3>
+            <div id='sponsors_gold'>
+                <a href="{sponsor_url}" target="_blank" class="gold-sponsor">
+                    <img src="images/sponsors/{sponsor_image}" alt="{sponsor_name}">
+                </a>
+            </div>
+
+            <h3>Silver</h3>
+            <div id='sponsors_silver'>
+                <a href="{sponsor_url}" target="_blank" class="silver-sponsor">
+                    <img src="images/sponsors/{sponsor_image}" alt="{sponsor_name}">
+                </a>
+            </div>
+
+            <h3>Bronze</h3>
+            <div id='sponsors_bronze'>
+                <a href="{sponsor_url}" target="_blank" class="bronze-sponsor">
+                    <img src="images/sponsors/{sponsor_image}" alt="{sponsor_name}">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="team" class="section">
+        <h1>Trazido a vocês por:</h1>
+        <h2>Time CEJS</h2>
+        <p>Nós somos os que trabalhamos duro para trazer esse evento a vocês.</p>
+        <div class="team-headers">
+            <ul>
+                <li>
+                    <a href="http://twitter.com/cmilfont" target="_blank">
+                        <img src="images/team/milfont.png">
+                        <div>@cmilfont</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://twitter.com/henriquegogo" target="_blank">
+                        <img src="images/team/henriquegogo.png">
+                        <div>@henriquegogo</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://twitter.com/ketemr" target="_blank">
+                        <img src="images/team/kete.png">
+                        <div>@ketemr</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://twitter.com/monyckyyy" target="_blank">
+                        <img src="images/team/monycky.png">
+                        <div>@monyckyyy</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+<script type="text/javascript">
+function Component(elementId, data, propTemplate) {
+    var ctx = this;
+    var container = document.getElementById(elementId);
+    var template = propTemplate || container.innerHTML;
+
+    this.data = {};
+    this.setData = this.render = function(option, doRender) {
+        if (Array.isArray(option)) this.data = [];
+        for (var key in option) this.data[key] = option[key];
+        if (doRender != false) render();
+    }
+    this.setData(data);
+
+    function render() {
+        if (typeof ctx.beforeRender == 'function') ctx.beforeRender();
+
+        var templateRendered = ''+template;
+        for (var prop in ctx.data) {
+            var propData = ctx.data[prop];
+            if (typeof propData === "object" && !Array.isArray(propData)) {
+                if (templateRendered != template) templateRendered += template;
+                for (var i in propData) {
+                    var propDataValue = (typeof propData[i] == 'function') ? propData[i]() : propData[i];
+                    templateRendered = templateRendered.replace(new RegExp('<!--'+i+'-->|{'+i+'}', 'g'), propDataValue);
+                }
+            } else {
+                var propDataValue = (typeof propData == 'function') ? propData() : propData;
+                templateRendered = templateRendered.replace(new RegExp('<!--'+prop+'-->|{'+prop+'}', 'g'), propDataValue);
+            }
+        }
+        container.innerHTML = templateRendered;
+        for (var prop in ctx.data) {
+            var propData = ctx.data[prop];
+            if (Array.isArray(propData)) {
+                var propTemplate = document.getElementById(prop).innerHTML;
+                new Component(prop, propData, propTemplate);
+            };
+        }
+
+        if (typeof ctx.afterRender == 'function') ctx.afterRender();
+    }
+}
+
+self.contentBody = new Component('contentBody', {
+    year: '2018',
+    date: '06 de Outubro de 2018',
+    city: 'Fortaleza, Brasil',
+    local: 'Universidade 7 de Setembro - UNI7',
+    local_description: 'A UNI7 é uma instituição que já nasce com 66 anos de experiência educacional e o compromisso com um padrão de ensino de alto nível.',
+    address: 'Av. Alm. Maximiano da Fonseca, 1395 - Eng. Luciano Cavalcante - Fortaleza/CE',
+    sponsors_gold: [
+        {
+            sponsor_name: 'Alura', sponsor_image: 'alura.png',
+            sponsor_url: 'http://www.alura.com.br'
+        },
+        {
+            sponsor_name: 'Caelum', sponsor_image: 'caelum.svg',
+            sponsor_url: 'http://www.caelum.com.br'
+        },
+        {
+            sponsor_name: 'Casa do Código', sponsor_image: 'casa_do_codigo.svg',
+            sponsor_url: 'http://www.casadocodigo.com.br'
+        },
+        {
+            sponsor_name: 'Produto Reativo', sponsor_image: 'produtoreativo.png',
+            sponsor_url: 'http://www.produtoreativo.com.br'
+        },
+
+
+    ],
+    sponsors_silver: [
+        {
+            sponsor_name: '', sponsor_image: '',
+            sponsor_url: ''
+        }
+    ],
+    sponsors_bronze: [
+        {
+            sponsor_name: '', sponsor_image: '',
+            sponsor_url: ''
+        }
+    ]
+});
+</script>
+
+<script>
+// Google Maps -3.732623,-38.467963
+// --------------------------------------------------------------------------------
+function initialize() {
+  var mapOptions = {
+    center: new google.maps.LatLng(-3.7710261,-38.4857209),
+    zoom: 16,
+    mapTypeControl: false,
+    scrollwheel: false,
+    draggable: false,
+    mapTypeControlOptions: {
+      style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+    },
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    zoomControlOptions: {
+      style: google.maps.ZoomControlStyle.SMALL
+    }
+  };
+
+  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  var centerMap = new google.maps.LatLng(-3.7710261,-38.4857209);
+  var marker = new google.maps.Marker({ position: centerMap, map: map });
+
+};
+
+function loadMapScript() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
+      'callback=initialize';
+  document.body.appendChild(script);
+};
+
+window.onload = function() {
+    loadMapScript();
+};
+</script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-43172240-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- use discount code EASTEREGG for a free tix -->
+</body>
+</html>
